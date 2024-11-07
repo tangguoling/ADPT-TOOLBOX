@@ -102,8 +102,5 @@ The application requires configuration files (`.yaml`) for training and predicti
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE.txt) file for details.
 
-## Contact
-
-For issues or inquiries, please contact the development team via the GitHub repository.
