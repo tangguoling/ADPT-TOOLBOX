@@ -20,13 +20,6 @@ This application provides a graphical user interface (GUI) for animal pose detec
 
 ### Prerequisites
 
-Before running the ADPT application, make sure the following dependencies are installed:
-
-- Python 3.9 or later
-- PyQt5
-- OpenCV
-- YAML
-
 You can install these dependencies using the following commands:
 
 ```bash
