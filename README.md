@@ -99,7 +99,21 @@ The application requires configuration files (`.yaml`) for training and predicti
 - `config_predict.yaml`: The configuration file used for model predictions.
 - `train.py`: Script to handle model training.
 - `predict.py`: Script to handle predictions on new videos.
+  
+## Citation
 
+If you use this project in your research, please cite our paper:
+
+[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1
+        
+        )  
+Authors: Tang Guoling, Yaning HanYaning, HanQuanying, LiuPengfei Wei  
+Published: May 2024  
+DOI: [10.7554/eLife.95709.1
+        
+        ](https://doi.org/10.7554/eLife.95709.1
+        
+        )
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE.txt) file for details.
