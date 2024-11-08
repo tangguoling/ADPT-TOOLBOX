@@ -1,5 +1,5 @@
 
-# ADPT Application - Animal Pose Detection and Tracking GUI
+# Anti-Drift Pose Tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
