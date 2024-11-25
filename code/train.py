@@ -7,7 +7,7 @@ Created on Mon Jan  8 18:49:52 2024
 
 import warnings
 warnings.filterwarnings('ignore')
-from core.train_latest import train
+from core.train import train
 from core.data_aug import data_augmentation
 import yaml
 from config.config_training import configuration
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     evaluate = False # T
     # shuffle_num = 3
     save_path = '_' + str(shuffle_num)
-    animal = 'singlemouse'
+    animal = 'singel_mouse'
     model_rmse = train('ADPT',animal, save_path, IMG_SIZE_H_ori, IMG_SIZE_W_ori, global_scale, IMG_SIZE_H, IMG_SIZE_W, BATCH_SIZE, variation, delta, initial_learning_rate, alpha,EPOCHS, WARMUP_EPOCHS, NUM_KEYPOINT, NUM_KEYPOINTS, shuffle_num, TrainingFraction, Tranfer_LR, channels,IMG_DIR, JSON, kp_con, initial_weight, bodyparts,data_augmentation(), early_stop, evaluate,num_classes,centre)
     
     for idx, bodypart in enumerate(bodyparts):
