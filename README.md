@@ -39,10 +39,10 @@ pip install PyQt5
 
 1. Clone or download this repository.
 2. Navigate to the project directory in your terminal.
-3. Run the `GUI.py` script using Python:
+3. Run the `GUI_v3.py` script using Python:
 
 ```bash
-python GUI.py
+python GUI_v3.py
 ```
 
 The main window of the ADPT application will open.
