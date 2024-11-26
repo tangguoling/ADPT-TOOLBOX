@@ -1,7 +1,7 @@
     # Video info
 Video_type: avi
-Video_path: D:/mouse/
-scorer: tang
+Video_path: D:/tgl adpt/test_data/
+scorer: sx
 channels: 3
 save_predicted_video: True
 colors: 
@@ -29,5 +29,5 @@ colors:
 - (55,245,230)
 
     # Model info
-model_path: singlemouse_model/_117481/cp.ckpt
+model_path: singel_mouse_model/_117481/cp.ckpt
 pcutoff: 0.2
