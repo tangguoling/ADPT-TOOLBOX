@@ -1,34 +1,17 @@
-    # Annotation info
-IMG_DIR: D:/ADPT/data/mouse/labeled-data
-JSON: D:/ADPT/data/mouse/mouse.json
-
-    # Image info
-IMG_SIZE_H_ori: 964
-IMG_SIZE_W_ori: 1288
-channels: 3
-
-    # Training image size
-global_scale: 0.5
-IMG_SIZE_H: 480
-IMG_SIZE_W: 640
-
-    # Model info
-initial_weight: None
-shuffle_num: 117481
-early_stop: True
 BATCH_SIZE: 8
-variation: 17 / 8
-initial_learning_rate: 1e-3
-alpha: 1e-5
 EPOCHS: 300
-WARMUP_EPOCHS: 10
-TrainingFraction: 0.95
-Tranfer_LR: 1e-3
+IMG_DIR: D:/ADPT-TOOLBOX-main/ADPT-TOOLBOX-main/code
+IMG_SIZE_H: 480
+IMG_SIZE_H_ori: 540
+IMG_SIZE_W: 640
+IMG_SIZE_W_ori: 960
+JSON: D:/ADPT-TOOLBOX-main/ADPT-TOOLBOX-main/code/output_frames/merged_annotations.json
 NUM_KEYPOINT: 16
-centre: 3
-delta: 0.025
-num_classes: 1
-bodyparts: 
+TrainingFraction: 0.7
+Tranfer_LR: 1e-3
+WARMUP_EPOCHS: 10
+alpha: 1e-5
+bodyparts:
 - nose
 - left_ear
 - right_ear
@@ -45,6 +28,15 @@ bodyparts:
 - root_tail
 - mid_tail
 - tip_tail
+centre: 3
+channels: 3
+delta: 0.025
+early_stop: true
+global_scale: 0.5
+initial_learning_rate: 1e-3
+initial_weight: None
+num_classes: 1
+shuffle_num: 117481
 skeleton:
 - (0,1)
 - (0,2)
@@ -71,4 +63,4 @@ skeleton:
 - (6,13)
 - (13,14)
 - (14,15)
-
+variation: 17 / 8
