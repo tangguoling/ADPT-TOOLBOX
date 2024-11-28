@@ -41,7 +41,7 @@ pip install PyQt5
 
 1. Clone or download this repository.
 2. Navigate to the project directory in your terminal.
-3. Run the `GUI_v3.py` script using Python:
+3. Run the `GUI_v4.py` script using Python:
 
 ```bash
 python GUI_v4.py
@@ -99,10 +99,16 @@ The application requires configuration files (`.yaml`) for training and predicti
 
 If you use this project in your research, please cite our paper:
 
-[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1)  
+[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1
+        
+        )  
 Authors: Tang Guoling, Yaning HanYaning, HanQuanying, LiuPengfei Wei  
 Published: May 2024  
-DOI: [10.7554/eLife.95709.1](https://doi.org/10.7554/eLife.95709.1)
+DOI: [10.7554/eLife.95709.1
+        
+        ](https://doi.org/10.7554/eLife.95709.1
+        
+        )
 
 ## License
 
