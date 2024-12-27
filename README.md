@@ -7,6 +7,16 @@
 
 This application provides a graphical user interface (GUI) for animal pose detection, video frame extraction, manual annotation, and model training using the ADPT (Anti-Drift Pose Tracker) system. It is designed for ease of use in multi-animal behavior tracking tasks and allows users to handle videos, annotate key points, and train models for pose tracking.
 
+## ADPT Usage Tutorial Videos
+
+We have created tutorial videos for using ADPT. You can find the video on YouTube and Bilibili to quickly learn how to use ADPT for animal pose estimation:
+
+- [YouTube Tutorial Video](https://youtu.be/evtoOAChXeU)
+- [Bilibili Tutorial Video](link to be added)
+
+These videos will help you efficiently master both the basic operations and advanced features of ADPT, enabling you to apply the tool effectively in your research and experiments.
+
+
 ## Features
 
 - **Video Loading and Frame Extraction**: Load videos and extract frames for further processing.
