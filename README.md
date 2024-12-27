@@ -12,7 +12,7 @@ This application provides a graphical user interface (GUI) for animal pose detec
 We have created tutorial videos for using ADPT. You can find the video on YouTube and Bilibili to quickly learn how to use ADPT for animal pose estimation:
 
 - [YouTube Tutorial Video](https://youtu.be/evtoOAChXeU)
-- [Bilibili Tutorial Video](link to be added)
+- [Bilibili Tutorial Video](https://www.bilibili.com/video/BV1wbCHY1EYx/?share_source=copy_web&vd_source=46c72ebafcd31f08bf970187e3f7440e)
 
 These videos will help you efficiently master both the basic operations and advanced features of ADPT, enabling you to apply the tool effectively in your research and experiments.
 
