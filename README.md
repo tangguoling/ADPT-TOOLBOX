@@ -51,11 +51,16 @@ pip install tqdm
 pip install PyQt5
 ```
 
-### Running the Application
+### Preparation
 
 1. Clone or download this repository.
-2. Navigate to the project directory in your terminal.
-3. Run the `GUI_v4.py` script using Python:
+2. Modify config.yaml. You may need to modify the image size information, image path ('IMG_DIR', the same as where the GUI_v4.py is located), number of animals ('num_classes'), center of body ('centre'), NUM_KEYPOINT, bodyparts and skeleton to correspond to your project. Model information allows you to control model training details.
+3. Modify config_predict.yaml. You may need to modify the Video_type, videos directory (Video_path), model_path. Please ensure that the videos to be processed have the same size as the original images during model training. Save_predicted_video allows you to control whether save predicted video (True or False).
+
+### Run the Application
+
+4. Open a terminal and enter the folder where the GUI_v4.py is located. Please make sure that config.yaml and config_predict.yaml is under the same folder of GUI_v4.py because script would read training configuration from them.
+5. Run the GUI_v4.py script using Python:
 
 ```bash
 python GUI_v4.py
@@ -65,7 +70,7 @@ The main window of the ADPT application will open.
 
 ## Usage
 
-### Loading Videos
+### Load Videos
 
 1. Click on the "Load Video" button.
 2. Select a video file from your system (.mp4, .avi, etc.).
@@ -76,7 +81,7 @@ The main window of the ADPT application will open.
 1. After loading a video, click "Extract Frames" to extract frames from the video.
 2. Frames will be stored in the `output_frames` directory for annotation and model training.
 
-### Annotating Frames
+### Annotate Frames
 
 1. Navigate to the "Annotate Frames" section in the menu.
 2. Use the annotation view to manually label key points on each frame.
@@ -85,21 +90,17 @@ The main window of the ADPT application will open.
 5. You can erase the last added point if needed.
 6. After annoation, you should click "Save Annotations"
 
-### Training a Model
-1. Before training ADPT, you should close GUI and modify the image size information, NUM_KEYPOINT, bodyparts and skeleton to correspond to your project.
+### Train a Model
 1. Navigate to the "Train Model" section in the menu.
 2. Ensure that the `config.yaml` file is properly configured with body parts and other parameters.
 3. Click the "Start Training" button to begin training the model using the annotated frames.
 
-### Predicting on New Videos
+### Predict New Videos
 
 1. Navigate to the "Analyze Video" section in the menu.
 2. Load a prediction configuration file (`config_predict.yaml`).
 3. Click the "Start Analysis" button to predict animal poses in new videos using the trained model.
 
-### Configurations
-
-The application requires configuration files (`.yaml`) for training and prediction tasks. You can load and edit these configurations directly from the GUI. Be sure to specify parameters such as body parts, skeleton structures, and model paths in the YAML files.
 
 ## File Structure
 
