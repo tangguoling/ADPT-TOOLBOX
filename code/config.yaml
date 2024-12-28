@@ -1,11 +1,11 @@
 BATCH_SIZE: 8
 EPOCHS: 300
-IMG_DIR: D:/ADPT-TOOLBOX-main/ADPT-TOOLBOX-main/code
+IMG_DIR: D:/ADPT-TOOLBOX-main/code
 IMG_SIZE_H: 480
 IMG_SIZE_H_ori: 540
 IMG_SIZE_W: 640
 IMG_SIZE_W_ori: 960
-JSON: D:/ADPT-TOOLBOX-main/ADPT-TOOLBOX-main/code/output_frames/merged_annotations.json
+JSON: D:/ADPT-TOOLBOX-main/code/output_frames/merged_annotations.json
 NUM_KEYPOINT: 16
 TrainingFraction: 0.7
 Tranfer_LR: 1e-3
