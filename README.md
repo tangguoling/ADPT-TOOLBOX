@@ -14,6 +14,10 @@ We have created tutorial videos for using ADPT. You can find the video on YouTub
 - [YouTube Tutorial Video](https://youtu.be/evtoOAChXeU)
 - [Bilibili Tutorial Video](https://www.bilibili.com/video/BV1wbCHY1EYx/?share_source=copy_web&vd_source=46c72ebafcd31f08bf970187e3f7440e)
 
+The mouse video of the demonstration can be found at the following link:
+
+- [Demo Mouse Video](https://zenodo.org/records/14566416?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImMzMjE0MWUzLTkxNjUtNGJmMy05MzllLTY5MmU2MjJmNGUzOSIsImRhdGEiOnt9LCJyYW5kb20iOiJiMjI2MTJjZWVkYzdjYjk5MmEyMTNjOTAyYTRjOTZjMiJ9.gN6eP6tgAxeb8f3fbWynCVYYFjKdq1JFYqTkBhF37d5ALmYXM7odRNe3_UyNC0x8K4PgW3zPKuCniHEIvdEPcQ)
+
 These videos will help you efficiently master both the basic operations and advanced features of ADPT, enabling you to apply the tool effectively in your research and experiments.
 
 
@@ -30,7 +34,7 @@ These videos will help you efficiently master both the basic operations and adva
 
 ### Prerequisites
 
-You can install these dependencies using the following commands:
+You can install these dependencies using the following commands (please be sure to install each package step by step, and confirm the installation at each step by "y".):
 
 ```bash
 conda create -n ADPT python==3.9
@@ -79,9 +83,10 @@ The main window of the ADPT application will open.
 3. Choose different body parts to annotate by selecting from the dropdown menu.
 4. Use the "Previous Frame" and "Next Frame" buttons to navigate through frames.
 5. You can erase the last added point if needed.
+6. After annoation, you should click "Save Annotations"
 
 ### Training a Model
-
+1. Before training ADPT, you should close GUI and modify the image size information, NUM_KEYPOINT, bodyparts and skeleton to correspond to your project.
 1. Navigate to the "Train Model" section in the menu.
 2. Ensure that the `config.yaml` file is properly configured with body parts and other parameters.
 3. Click the "Start Training" button to begin training the model using the annotated frames.
