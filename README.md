@@ -114,16 +114,12 @@ The application requires configuration files (`.yaml`) for training and predicti
 
 If you use this project in your research, please cite our paper:
 
-[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1
-        
-        )  
+[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1)  
 Authors: Tang Guoling, Yaning HanYaning, HanQuanying, LiuPengfei Wei  
 Published: May 2024  
 DOI: [10.7554/eLife.95709.1
         
-        ](https://doi.org/10.7554/eLife.95709.1
-        
-        )
+        ](https://doi.org/10.7554/eLife.95709.1)
 
 ## License
 
