@@ -166,7 +166,7 @@ class AnnotateFrame(QGraphicsView):
 
                 # 恢复标注点
                 for idx, (x, y, animal_id) in enumerate(joints):
-                    body_part = self.get_parent_app().bodyparts[idx]
+                    body_part = self.get_parent_app().bodyparts[idx - (animal_id - 1) * len(self.get_parent_app().bodyparts)]
                     if not np.isnan(x) and not np.isnan(y):
                         if animal_id not in self.points:
                             self.points[animal_id] = {}
