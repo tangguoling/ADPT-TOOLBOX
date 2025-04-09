@@ -115,10 +115,10 @@ The main window of the ADPT application will open.
 
 If you use this project in your research, please cite our paper:
 
-[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.1)  
-Authors: Tang Guoling, Yaning HanYaning, HanQuanying, LiuPengfei Wei  
+[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.2)  
+Authors: Guoling Tang, Yaning Han, Xing Sun, Ruonan Zhang, Ming-Hu Han, Quanying Liu, Pengfei Wei  
 Published: May 2024  
-DOI: [10.7554/eLife.95709.1](https://doi.org/10.7554/eLife.95709.1)
+DOI: [10.7554/eLife.95709.2](https://doi.org/10.7554/eLife.95709.2)
 
 ## License
 
