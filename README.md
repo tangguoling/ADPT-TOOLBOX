@@ -88,7 +88,8 @@ The main window of the ADPT application will open.
 3. Choose different body parts to annotate by selecting from the dropdown menu.
 4. Use the "Previous Frame" and "Next Frame" buttons to navigate through frames.
 5. You can erase the last added point if needed.
-6. After annoation, you should click "Save Annotations"
+6. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
+7. After annoation, you should click "Save Annotations"
 
 ### Train a Model
 1. Navigate to the "Train Model" section in the menu.
@@ -115,10 +116,16 @@ The main window of the ADPT application will open.
 
 If you use this project in your research, please cite our paper:
 
-[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.2)  
+[Anti-drift pose tracker (ADPT): A transformer-based network for robust animal pose estimation cross-species](https://doi.org/10.7554/eLife.95709.2
+        
+        )  
 Authors: Guoling Tang, Yaning Han, Xing Sun, Ruonan Zhang, Ming-Hu Han, Quanying Liu, Pengfei Wei  
 Published: March 2025  
-DOI: [10.7554/eLife.95709.2](https://doi.org/10.7554/eLife.95709.2)
+DOI: [10.7554/eLife.95709.2
+        
+        ](https://doi.org/10.7554/eLife.95709.2
+        
+        )
 
 ## License
 
