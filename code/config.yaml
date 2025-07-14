@@ -28,7 +28,7 @@ bodyparts:
 - root_tail
 - mid_tail
 - tip_tail
-centre: 3#Index of body center keypoint.
+centre: 3 #Index of body center keypoint.
 channels: 3
 delta: 0.025
 early_stop: True #It should be set as 'False' for multi-animal tracking
