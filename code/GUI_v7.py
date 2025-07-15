@@ -464,11 +464,11 @@ class ADPTApp(QMainWindow):
 
         layout_btn_zoom = QHBoxLayout()
 
-        btn_zoom_in = QPushButton("Zoom In")
+        btn_zoom_in = QPushButton("Zoom In/Crop")
         btn_zoom_in.clicked.connect(self._zoom_in_img)
         layout_btn_zoom.addWidget(btn_zoom_in)
 
-        btn_reset_zoom= QPushButton("Reset Zoom")
+        btn_reset_zoom= QPushButton("Reset Zoom/Crop")
         btn_reset_zoom.clicked.connect(self._reset_zoom)
         layout_btn_zoom.addWidget(btn_reset_zoom)
 
