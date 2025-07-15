@@ -88,8 +88,19 @@ The main window of the ADPT application will open.
 3. Choose different body parts to annotate by selecting from the dropdown menu.
 4. Use the "Previous Frame" and "Next Frame" buttons to navigate through frames.
 5. You can erase the last added point if needed.
-6. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
-7. After annoation, you should click "Save Annotations"
+6. To zoom or crop:
+
+Click the "Zoom In/Crop" button.
+
+For cropping: Hold the left mouse button and drag to select the ROI (Region of Interest).
+
+For zooming: Use the mouse scroll wheel to zoom in/out.
+
+Annotate the data as needed.
+
+After annotation, click "Reset Zoom/Crop" to restore the original image size.
+7. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
+8. After annoation, you should click "Save Annotations"
 
 ### Train a Model
 1. Navigate to the "Train Model" section in the menu.
