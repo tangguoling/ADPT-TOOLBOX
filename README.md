@@ -16,8 +16,8 @@ To improve annotation speed and usability, v8.1.0 introduces:
   - `Ctrl + A`: Previous Frame
   - `Ctrl + S`: Save & Merge Annotations
   - `Ctrl + E`: Erase Point
-  - `Ctrl + Q`: Zoom In
-  - `Ctrl + W`: Reset Zoom
+  - `Ctrl + Q`: Zoom In/Crop
+  - `Ctrl + W`: Reset Zoom/Crop
 
 - 🖼️ **Shortcut Hint Panel**: A fixed overlay in the top-left corner displays all shortcut keys for quick reference.
 
