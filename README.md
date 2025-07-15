@@ -71,7 +71,7 @@ pip install PyQt5
 ### Preparation
 
 1. Clone or download this repository.
-2. Modify config.yaml. You may need to modify the image size information, image path ('IMG_DIR', the same as where the GUI_v4.py is located), number of animals ('num_classes'), center of body ('centre'), NUM_KEYPOINT, bodyparts and skeleton to correspond to your project. Model information allows you to control model training details.
+2. Modify config.yaml. You may need to modify the image size information, image path ('IMG_DIR', the same as where the GUI_v8.py is located), number of animals ('num_classes'), center of body ('centre'), NUM_KEYPOINT, bodyparts and skeleton to correspond to your project. Model information allows you to control model training details.
 3. Modify config_predict.yaml. You may need to modify the Video_type, videos directory (Video_path), model_path. Please ensure that the videos to be processed have the same size as the original images during model training. Save_predicted_video allows you to control whether save predicted video (True or False).
 
 ### Run the Application
