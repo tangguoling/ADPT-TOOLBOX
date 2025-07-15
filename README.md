@@ -7,6 +7,23 @@
 
 This application provides a graphical user interface (GUI) for animal pose detection, video frame extraction, manual annotation, and model training using the ADPT (Anti-Drift Pose Tracker) system. It is designed for ease of use in multi-animal behavior tracking tasks and allows users to handle videos, annotate key points, and train models for pose tracking.
 
+## 🆕 Version v8.1.0 – Enhanced Annotation Experience with Keyboard Shortcuts
+
+To improve annotation speed and usability, v8.1.0 introduces:
+
+- ✅ **Keyboard Shortcuts**:
+  - `Ctrl + D`: Next Frame
+  - `Ctrl + A`: Previous Frame
+  - `Ctrl + S`: Save & Merge Annotations
+  - `Ctrl + E`: Erase Point
+  - `Ctrl + Q`: Zoom In
+  - `Ctrl + W`: Reset Zoom
+
+- 🖼️ **Shortcut Hint Panel**: A fixed overlay in the top-left corner displays all shortcut keys for quick reference.
+
+These improvements are designed to streamline the labeling process for high-throughput animal behavior annotation tasks.
+
+
 ## ADPT Usage Tutorial Videos
 
 We have created tutorial videos for using ADPT. You can find the video on YouTube and Bilibili to quickly learn how to use ADPT for animal pose estimation:
