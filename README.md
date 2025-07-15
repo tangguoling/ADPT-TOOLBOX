@@ -63,7 +63,7 @@ pip install PyQt5
 5. Run the GUI_v4.py script using Python:
 
 ```bash
-python GUI_v4.py
+python GUI_v7.py
 ```
 
 The main window of the ADPT application will open.
