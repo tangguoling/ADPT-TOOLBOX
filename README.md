@@ -94,7 +94,7 @@ The main window of the ADPT application will open.
     For zooming: Use the mouse scroll wheel to zoom in/out.
     Annotate the data as needed.
     After annotation, click "Reset Zoom/Crop" to restore the original image size.
-    (For GUI_v7, testing)
+    (For GUI_v7.py, testing)
 8. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
 9. After annoation, you should click "Save Annotations"
 
