@@ -63,7 +63,7 @@ pip install PyQt5
 5. Run the GUI_v4.py script using Python:
 
 ```bash
-python GUI_v7.py
+python GUI_v4.py
 ```
 
 The main window of the ADPT application will open.
@@ -94,8 +94,9 @@ The main window of the ADPT application will open.
     For zooming: Use the mouse scroll wheel to zoom in/out.
     Annotate the data as needed.
     After annotation, click "Reset Zoom/Crop" to restore the original image size.
-7. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
-8. After annoation, you should click "Save Annotations"
+    (For GUI_v7, testing)
+8. Before generating the final annotation file, ensure you delete the merged_annotations.json file located in the output_frames directory.
+9. After annoation, you should click "Save Annotations"
 
 ### Train a Model
 1. Navigate to the "Train Model" section in the menu.
