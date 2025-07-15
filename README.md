@@ -59,7 +59,7 @@ pip install PyQt5
 
 ### Run the Application
 
-4. Open a terminal and enter the folder where the GUI_v4.py is located. Please make sure that config.yaml and config_predict.yaml is under the same folder of GUI_v4.py because script would read training configuration from them.
+4. Open a terminal and enter the folder where the GUI_v4.py is located. Please make sure that config.yaml and config_predict.yaml is under the same folder of GUI_v8.py because script would read training configuration from them.
 5. Run the GUI_v8.py script using Python:
 
 ```bash
