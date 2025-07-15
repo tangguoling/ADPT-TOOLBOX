@@ -50,8 +50,8 @@ class AnnotateFrame(QGraphicsView):
             "Ctrl+A - Prev Frame\n"
             "Ctrl+S - Save All\n"
             "Ctrl+D - Next Frame\n"
-            "Ctrl+Q - Zoom In/Cut\n"
-            "Ctrl+W - Reset Zoom/Cut\n"
+            "Ctrl+Q - Zoom In/Crop\n"
+            "Ctrl+W - Reset Zoom/Crop\n"
             "Ctrl+E - Erase Point"
         )
         self.shortcut_label.move(10, 10)
