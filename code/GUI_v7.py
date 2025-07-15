@@ -549,6 +549,8 @@ class ADPTApp(QMainWindow):
 
         self.save_current_frame_annotations(self.current_frame_index)
 
+        if os.path.exists(output_dir + "/merged_annotations.json"):  # 检查文件是否存在
+            os.remove(output_dir + "/merged_annotations.json")       # 删除文件
 
         for subdir, _, files in os.walk(output_dir):
             for file in files:
