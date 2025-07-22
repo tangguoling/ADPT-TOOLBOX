@@ -20,7 +20,8 @@ from PyQt5.QtGui import QPixmap, QIcon, QPalette, QImage, QColor, QPainter
 from PyQt5.QtCore import Qt, QRectF
 import numpy as np
 import time
-
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtCore import QUrl
 class AnnotateFrame(QGraphicsView):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -352,7 +353,9 @@ class ADPTApp(QMainWindow):
         self.stacked_widget.addWidget(self.training_page)
         self.stacked_widget.addWidget(self.prediction_page)
         self.stacked_widget.setCurrentIndex(0)
-
+        # self.create_discussion_page()
+        # self.stacked_widget.addWidget(self.discussion_page)
+        
     def keyPressEvent(self, event):
         if event.modifiers() == Qt.ControlModifier and event.key() == Qt.Key_A:
             self.load_prev_frame()
@@ -400,7 +403,7 @@ class ADPTApp(QMainWindow):
         predict_action = QAction("Analyze Video", self)
         predict_action.triggered.connect(lambda: self.stacked_widget.setCurrentIndex(3))
         menu_bar.addAction(predict_action)
-
+        
     def create_welcome_page(self):
         self.welcome_page = QWidget()
         layout = QVBoxLayout()
@@ -720,11 +723,16 @@ class ADPTApp(QMainWindow):
         self.prediction_page = QWidget()
         layout = QVBoxLayout()
 
-        config_button = QPushButton("Edit Prediction Config")
+        config_button = QPushButton("Load Prediction Config")
         config_button.clicked.connect(self.load_predict_config)
         config_button.setStyleSheet("background-color: #5F9EA0; color: white;")
         layout.addWidget(config_button)
 
+        edit_config_button = QPushButton("Edit Config")
+        edit_config_button.clicked.connect(self.edit_predict_config)
+        edit_config_button.setStyleSheet("background-color: #5F9EA0; color: white;")
+        layout.addWidget(edit_config_button)
+        
         predict_button = QPushButton("Start Analysis")
         predict_button.clicked.connect(self.predict_video)
         predict_button.setStyleSheet("background-color: #5F9EA0; color: white;")
@@ -991,6 +999,38 @@ class ADPTApp(QMainWindow):
                 self.predict_config = yaml.safe_load(file)
             QMessageBox.information(self, "Info", f"Prediction config loaded: {config_path}")
 
+
+    def edit_predict_config(self):
+        if self.predict_config is None:
+            QMessageBox.warning(self, "Warning", "Please load a config first.")
+            return
+
+        self.config_editor = QTextEdit()
+        self.config_editor.setPlainText(yaml.dump(self.predict_config))
+
+        self.config_dialog = QDialog(self)
+        self.config_dialog.setWindowTitle("Edit Predict Config")
+        self.config_dialog.setGeometry(200, 100, 800, 600)
+
+        dialog_layout = QVBoxLayout()
+        dialog_layout.addWidget(self.config_editor)
+
+        save_button = QPushButton("Save Config")
+        save_button.clicked.connect(self.save_predict_config)
+        dialog_layout.addWidget(save_button)
+
+        self.config_dialog.setLayout(dialog_layout)
+        self.config_dialog.exec_()
+        
+    def save_predict_config(self):
+        try:
+            self.predict_config = yaml.safe_load(self.config_editor.toPlainText())
+            QMessageBox.information(self, "Info", "Config updated successfully.")
+            self.update_config_selections()
+            self.config_dialog.accept()
+        except yaml.YAMLError as e:
+            QMessageBox.critical(self, "Error", f"Failed to update config: {e}")
+
     def predict_video(self):
         if self.predict_config is None:
             QMessageBox.warning(self, "Warning", "Please load a prediction config first")
@@ -999,7 +1039,12 @@ class ADPTApp(QMainWindow):
             with tempfile.NamedTemporaryFile(delete=False, mode='w', suffix='.yaml') as temp_predict_file:
                 yaml.dump(self.predict_config, temp_predict_file)
                 temp_predict_file_path = temp_predict_file.name
-            subprocess.run(['python', 'predict.py', '--config', temp_predict_file_path], check=True)
+            
+            with tempfile.NamedTemporaryFile(delete=False, mode='w', suffix='.yaml') as temp_config_file:
+                yaml.dump(self.config, temp_config_file)
+                temp_config_file_path = temp_config_file.name
+                
+            subprocess.run(['python', 'predict.py', '--config_predict', temp_predict_file_path, '--config', temp_config_file_path], check=True)
             os.remove(temp_predict_file_path)
             QMessageBox.information(self, "Info", "Video analysis completed")
         except subprocess.CalledProcessError as e:

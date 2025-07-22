@@ -11,14 +11,23 @@ from core.predict import predict, predict_picture
 import yaml
 from config.config_training import configuration
 from config.config_predicting import configuration_predict
+import argparse
+
 if __name__ == '__main__':
-    json_file = 'config.yaml'
+    parser = argparse.ArgumentParser(description='argparse testing')
+    parser.add_argument('--config', type=str, default = 'config.yaml')
+    parser.add_argument('--config_predict', type=str, default = 'config_predict.yaml')
+    args = parser.parse_args()
+    json_file = args.config
+    # print(json_file)
+    json_file_predict = args.config_predict
+    # print(json_file_predict)
     print('\nWellcome to use ADPT v1.2.1 for keypoints detection.')
     with open(json_file, 'r', encoding='utf-8') as f:
         result = yaml.load(f.read(), Loader=yaml.FullLoader)
-    with open('config_predict.yaml', 'r', encoding='utf-8') as f:
+    with open(json_file_predict, 'r', encoding='utf-8') as f:
         result_predict = yaml.load(f.read(), Loader=yaml.FullLoader)
-        
+    print(result_predict)
     # print('\nTraining configuration:')
     IMG_SIZE_H_ori, IMG_SIZE_W_ori, global_scale, IMG_SIZE_H, IMG_SIZE_W, BATCH_SIZE, variation, delta, initial_learning_rate, alpha,EPOCHS, WARMUP_EPOCHS, NUM_KEYPOINT, NUM_KEYPOINTS, shuffle_num, TrainingFraction, Tranfer_LR, channels,IMG_DIR, JSON, kp_con, initial_weight, bodyparts, early_stop,centre,num_classes = configuration(result)
     # print(result)

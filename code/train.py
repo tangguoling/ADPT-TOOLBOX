@@ -12,8 +12,16 @@ from core.data_aug import data_augmentation
 import yaml
 from config.config_training import configuration
 import numpy as np
+import argparse
+
 if __name__ == '__main__':
-    json_file = 'config.yaml'
+    parser = argparse.ArgumentParser(description='argparse testing')
+    parser.add_argument('--config', type=str, default = 'config.yaml')
+    parser.add_argument('--config_predict', type=str, default = 'config_predict.yaml')
+    args = parser.parse_args()
+    json_file = args.config
+    # print(json_file)
+    json_file_predict = args.config_predict
     print('\nWellcome to use ADPT v1.2.1 for keypoints detection.')
     print('\nTraining configuration:')
     with open(json_file, 'r', encoding='utf-8') as f:
